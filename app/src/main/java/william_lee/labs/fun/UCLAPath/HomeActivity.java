@@ -32,6 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private int savedIndex;
     private int savedDay;
+    private int curDay;
 
     private AlertDialog.Builder askBuilder;
     private DialogInterface.OnClickListener askListener;
@@ -46,13 +47,15 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        weekend=checkWeekend();
-        if(weekend){
+        curDay=getDay();
+        if(checkWeekend(curDay)){
+            list=new ArrayList<>();
+            fixAdapter();
             Toast.makeText(getApplicationContext(), "none today!", Toast.LENGTH_SHORT).show();
         }
         else {
             sharedp = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-            int curDay = getDay();
+            //int curDay = getDay();
             if (!sharedp.contains(INDEX_KEY) && !sharedp.contains(DAY_KEY)
                     || sharedp.getInt(DAY_KEY, 0)!=curDay) {
                 SharedPreferences.Editor edit = sharedp.edit();
@@ -90,7 +93,7 @@ public class HomeActivity extends AppCompatActivity {
                                         SharedPreferences.Editor edit = sharedp.edit();
                                         int nextInd = Math.min(savedIndex+1, list.size());
                                         edit.putInt(INDEX_KEY, nextInd);
-                                        edit.putInt(DAY_KEY, getDay());
+                                        edit.putInt(DAY_KEY, curDay);
                                         edit.commit();
                                         Toast.makeText(getApplicationContext(), "committed2", Toast.LENGTH_SHORT).show();
                                         savedIndex = nextInd;
@@ -148,16 +151,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-
-
     public int getDay(){
         cal=Calendar.getInstance();
         return cal.get(Calendar.DAY_OF_WEEK);
     }
 
-    public boolean checkWeekend(){
-        cal=Calendar.getInstance();
-        int day=cal.get(Calendar.DAY_OF_WEEK);
+    public boolean checkWeekend(int day){
         return day==Calendar.SATURDAY||day==Calendar.SUNDAY;
     }
 
