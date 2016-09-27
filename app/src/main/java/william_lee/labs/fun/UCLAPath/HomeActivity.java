@@ -122,25 +122,24 @@ public class HomeActivity extends AppCompatActivity {
         switch(day){
             case Calendar.MONDAY:
                 list.add(new entry("Math 170A - Lec 1 - MS 6229",34.069653, -118.442877, "9:00-9:50 AM"));
-                list.add(new entry("EPS SCI 15 - Lec 1 - Broad 2160E",34.076141, -118.440924,"1:00-1:50 PM"));
                 list.add(new entry("COM SCI 1 - DIS 1A - PAB 1434A",34.070816, -118.441618,"2:00-2:50 PM"));
                 list.add(new entry("COM SCI 31 - LEC 2 - Haines 39", 34.073014, -118.441189, "4:00-5:50 PM"));
                 break;
             case Calendar.TUESDAY:
-                list.add(new entry("EPS SCI 15 - LAB 1D - GEO 3820",34.069378, -118.441780,"9:00-10:50 PM"));
+                list.add(new entry("EPS SCI 3 - Lec 1 - Moore 100",34.070484, -118.442739,"12:30-1:45 PM"));
+                list.add(new entry("EPS SCI 3 - DIS 1E - Geology 5644",34.069295, -118.441794,"3:00-3:50 PM"));
                 break;
             case Calendar.WEDNESDAY:
                 list.add(new entry("Math 170A - Lec 1 - MS 6229",34.069653, -118.442877, "9:00-9:50 AM"));
-                list.add(new entry("EPS SCI 15 - Lec 1 - Broad 2160E",34.076141, -118.440924,"1:00-1:50 PM"));
                 list.add(new entry("COM SCI 1 - SEM 1 - Dodd 147",34.073077, -118.439289,"2:00-2:50 PM"));
                 list.add(new entry("COM SCI 31 - LEC 2 - Haines 39", 34.073014, -118.441189, "4:00-5:50 PM"));
                 break;
             case Calendar.THURSDAY:
                 list.add(new entry("Math 170A - DIS 1A - MS 6229",34.069653, -118.442877, "9:00-9:50 AM"));
+                list.add(new entry("EPS SCI 3 - Lec 1 - Moore 100",34.070484, -118.442739,"12:30-1:45 PM"));
                 break;
             case Calendar.FRIDAY:
                 list.add(new entry("Math 170A - Lec 1 - MS 6229",34.069653, -118.442877, "9:00-9:50 AM"));
-                list.add(new entry("EPS SCI 15 - Lec 1 - Broad 2160E",34.076141, -118.440924,"1:00-1:50 PM"));
                 list.add(new entry("COM SCI 31 - DIS 2F - Boelter 5419",34.069454, -118.443153,"4:00-5:50 PM"));
                 break;
         }
