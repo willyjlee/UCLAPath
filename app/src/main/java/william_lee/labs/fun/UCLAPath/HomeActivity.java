@@ -140,7 +140,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case Calendar.FRIDAY:
                 list.add(new entry("Math 170A - Lec 1 - MS 6229",34.069653, -118.442877, "9:00-9:50 AM"));
-                list.add(new entry("COM SCI 31 - DIS 2F - Boelter 5419",34.069454, -118.443153,"4:00-5:50 PM"));
+                list.add(new entry("COM SCI 31 - DIS 2A - Humanities 169",34.071696, -118.441234,"10:00 - 11:50 AM"));
                 break;
         }
         //TODO: mark things as done;
